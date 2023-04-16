@@ -1,3 +1,8 @@
+use crate::board::Board;
+use crate::board::Player;
+use crate::action::Action;
+
+#[derive(Debug)]
 pub struct Game {
     pub board: Board,
     pub current_player: usize,
@@ -13,14 +18,6 @@ impl Game {
 
     pub fn play_card(&mut self, card_index: usize) {
         // Implement logic for playing a card
-    }
-
-    pub fn attack(&mut self, attacker: usize, target: usize) {
-        // Implement logic for attacking
-    }
-
-    pub fn use_hero_power(&mut self) {
-        // Implement logic for using hero power
     }
 
     pub fn end_turn(&mut self) {

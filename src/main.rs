@@ -6,13 +6,12 @@ mod game;
 
 use game::Game;
 use board::{Player, Board};
-use hero::{Hero, HeroPower};
-use card::{Card, Minion, Spell, Weapon, Effect};
+use hero::Hero;
+use card::{Card, Minion, Spell, Effect};
 use action::Action;
 
 fn create_deck() -> Vec<Card> {
     // Create a deck with 30 cards for testing purposes
-    // In a complete implementation, this function should generate a valid deck based on user input
     vec![]
 }
 
@@ -23,13 +22,11 @@ fn main() {
     let player1_hero = Hero {
         name: String::from("Player 1 Hero"),
         health: 30,
-        hero_power: HeroPower::ExamplePower,
     };
 
     let player2_hero = Hero {
         name: String::from("Player 2 Hero"),
         health: 30,
-        hero_power: HeroPower::ExamplePower,
     };
 
     let player1 = Player {
