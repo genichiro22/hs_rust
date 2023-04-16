@@ -1,6 +1,6 @@
 pub enum Action {
     PlayCard(usize),
-    Attack(usize, usize),
-    HeroPower,
+    AttackWithMinion(usize, usize),
+    AttackWithHero(usize),
     EndTurn,
 }

@@ -22,28 +22,33 @@ fn main() {
     let player1_hero = Hero {
         name: String::from("Player 1 Hero"),
         health: 30,
+        attack: 2,
     };
 
     let player2_hero = Hero {
         name: String::from("Player 2 Hero"),
         health: 30,
+        attack: 1,
     };
 
     let player1 = Player {
         hero: player1_hero,
         hand: vec![],
         deck: player1_deck,
-        mana: 0,
+        max_mana: 0,
+        current_mana: 0,
         minions: vec![],
     };
-
+    
     let player2 = Player {
         hero: player2_hero,
         hand: vec![],
         deck: player2_deck,
-        mana: 0,
+        max_mana: 0,
+        current_mana: 0,
         minions: vec![],
     };
+    
 
     let mut game = Game::new(player1, player2);
 
