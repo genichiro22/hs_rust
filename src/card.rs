@@ -23,4 +23,6 @@ pub struct Spell {
 pub enum Effect {
     Damage(u32),
     Heal(u32),
+    DealDamageToAllEnemyMinions(u32),
+    DealDamageToTarget(u32),
 }

@@ -3,6 +3,7 @@ mod hero;
 mod board;
 mod action;
 mod game;
+mod card_samples;
 
 use game::Game;
 use board::{Player, Board};
@@ -10,9 +11,12 @@ use hero::Hero;
 use card::{Card, Minion, Spell, Effect};
 use action::Action;
 
+use card_samples::sample_cards;
+
 fn create_deck() -> Vec<Card> {
     // Create a deck with 30 cards for testing purposes
-    vec![]
+    // vec![]
+    sample_cards()
 }
 
 fn main() {

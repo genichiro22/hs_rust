@@ -3,6 +3,7 @@ use crate::board::Player;
 use crate::action::Action;
 use crate::card::Card;
 use crate::card::Effect;
+use crate::card_samples::sample_cards;
 
 #[derive(Debug)]
 pub struct Game {
@@ -12,9 +13,12 @@ pub struct Game {
 
 impl Game {
     pub fn new(player1: Player, player2: Player) -> Self {
-        Game {
-            board: Board { player1, player2 },
+        Self {
             current_player: 0,
+            board: Board {
+                player1,
+                player2,
+            },
         }
     }
 
@@ -68,6 +72,12 @@ impl Game {
             }
             Effect::Heal(amount) => {
                 // Implement logic for healing
+            }
+            Effect::DealDamageToAllEnemyMinions(amount) => {
+                // Implement logic for DealDamageToAllEnemyMinions
+            }
+            Effect::DealDamageToTarget(amount) => {
+                // Implement logic for DealDamageToTarget
             }
         }
     }
